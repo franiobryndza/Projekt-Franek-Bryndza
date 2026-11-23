@@ -1,0 +1,36 @@
+:root{--pitch:#1f5c3a;--pitch-dark:#16442b;--line:#f4f7f2;--bg:#eef2ec;--ink:#1b2a21;--card:#fff;--win:#1f7a46;--draw:#8a6d1d;--loss:#b3372f}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:var(--pitch);color:var(--line);padding:1rem 1rem 0;border-bottom:4px solid var(--line);
+  background-image:linear-gradient(90deg,transparent 49.8%,rgba(255,255,255,.15) 50%,transparent 50.2%)}
+h1{margin:0 0 .8rem;font-size:1.8rem;letter-spacing:.5px}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+.tab{background:var(--pitch-dark);color:var(--line);border:0;padding:.7rem 1rem;font:inherit;cursor:pointer;border-radius:6px 6px 0 0}
+.tab.active{background:var(--bg);color:var(--ink);font-weight:bold}
+.tab:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+main{max-width:900px;margin:0 auto;padding:1.2rem 1rem 3rem}
+.panel{display:none}.panel.active{display:block}
+h2{margin-top:0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem}
+.stat{background:var(--card);border-left:6px solid var(--pitch);padding:1.2rem;border-radius:4px}
+.stat b{display:block;font-size:2.6rem;color:var(--pitch)}
+.row{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.8rem}
+input,select{padding:.6rem;border:1px solid #b9c5bb;border-radius:4px;font:inherit;background:#fff;flex:1 1 140px;min-width:0}
+.search{width:100%;margin-bottom:.8rem}
+button.primary{background:var(--pitch);color:#fff;border:0;padding:.6rem 1.1rem;border-radius:4px;font:inherit;cursor:pointer}
+button.primary:hover{background:var(--pitch-dark)}
+button.del{background:none;border:1px solid var(--loss);color:var(--loss);border-radius:4px;padding:.3rem .6rem;cursor:pointer;font:inherit}
+button.del:hover{background:var(--loss);color:#fff}
+.error{color:var(--loss);min-height:1.2em;margin:.2rem 0 .8rem}
+.scroll{overflow-x:auto;background:var(--card);border-radius:4px}
+table{width:100%;border-collapse:collapse}
+th,td{padding:.65rem .8rem;text-align:left;border-bottom:1px solid #e1e8e2;white-space:nowrap}
+th{background:var(--pitch-dark);color:var(--line)}
+.res{font-weight:bold}.Wygrana{color:var(--win)}.Remis{color:var(--draw)}.Porażka{color:var(--loss)}
+tr.me td{background:#e3f1e7;font-weight:bold}
+.empty{text-align:center;color:#6b786f;padding:1.2rem}
+.note{color:#56635a;font-size:.9rem}
+@media(max-width:560px){h1{font-size:1.4rem}.tab{padding:.6rem .7rem;font-size:.9rem}th,td{padding:.5rem}}
+a.tab{display:inline-block;text-decoration:none}
+form.inline{display:inline;margin:0}
+.ok{color:var(--win)}
